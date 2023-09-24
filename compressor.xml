@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<PyBrain>
+	<Network class="pybrain.structure.networks.feedforward.FeedForwardNetwork" name="FeedForwardNetwork-280">
+		<name val="'FeedForwardNetwork-280'"/>
+		<Modules>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" inmodule="True" name="LinearLayer-277">
+				<dim val="1"/>
+			</LinearLayer>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" name="LinearLayer-281" outmodule="True">
+				<dim val="1"/>
+			</LinearLayer>
+			<TanhLayer class="pybrain.structure.modules.tanhlayer.TanhLayer" name="TanhLayer-282">
+				<dim val="5"/>
+			</TanhLayer>
+		</Modules>
+		<Connections>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-278">
+				<inmod val="LinearLayer-277"/>
+				<outmod val="TanhLayer-282"/>
+				<Parameters>[-0.8785555913933281, 0.6259600988900768, 0.010083016232463677, -1.525061762083582, 0.9551415187130161]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-279">
+				<inmod val="TanhLayer-282"/>
+				<outmod val="LinearLayer-281"/>
+				<Parameters>[-1.184014906224382, 3.614182476559007, -1.6476650260619121, 0.9605968992967245, -1.2854014890020495]</Parameters>
+			</FullConnection>
+		</Connections>
+	</Network>
+</PyBrain>
